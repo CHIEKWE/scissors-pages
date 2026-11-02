@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="uft-8">
+        <meta name="viweport" content="width=device-width,inital-scale=1.0">
+        <title>shortening solution</title>
+        <style>
+            /*reset & base styles*/
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+        body{
+            font-family: 'segoe UI', Tahoma, Geneva,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #141414;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .logo{
+            display: flex;
+            align-self: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 20px;
+            color: #0056d2;
+        }
+        .nav {
+            display: flex;
+            gap: 32px;
+
+        }
+        .nav a {
+text-decoration: none;
+color: #555555;
+font-size: 15px;
+font-weight: 500;
+        }
+        .nav a.active, .nav a:hover {
+            color:#0056d2;
+        }
+        .auth-buttons {
+            display: flex;
+            align-self: center;
+            row-gap: 20px;
+        }
+        .btn-login { 
+            text-decoration: none;
+            color: #0056d2;
+            font-weight: 600;
+        }
+        .btn-primary {
+            text-decoration: none;
+            background-color: #0056d2;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        } 
+        .hero-title {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        .highlight{
+            color: #0056d2;
+        }
+        .hero-description {
+            font-size: 16px;
+            color: #666666;
+            max-width: 680px;
+            margin: 0 auto 30px;
+        }
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            row-gap: 24px;
+            margin-bottom: 50px;
+        }
+        .btn-link {
+            text-decoration: none;
+            color: #0056d2;
+            font-weight: 600;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 60px 80px;
+            margin-top: 40px;
+        }
+        .stats-title h2 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .stats-grid{
+            display: flex;
+            gap: 40px;
+        }
+        .stats-item h3 {
+             font-size: 28px;
+            font-weight: 700;
+            color: #141414;
+        }
+        .stats-item p{
+            font-size: 14px;
+            color: #666666;
+        }
+        .features{
+            padding:80px 80px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:40px;
+        }
+        .feature-card h3{
+           font-size: 18px;
+            margin-bottom: 10px;
+            color: #0056d2;  
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        .pricing {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #fcfcfc;
+        }
+        .pricing h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .pricing p {
+            color: #666;
+            margin-bottom: 50px;
+        }
+        .pricing-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .pricing-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 40px 30px;
+            width: 300px;
+            text-align: left;
+        }
+        .pricing-card.featured {
+            background: #0b132b;
+            color: #fff;
+            border: none;
+        }
+        .pricing-card.featured p {
+            color: #ccc;
+        }
+        .faqs {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        .faqs h2{
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .faq-item{
+            border-bottom: 1px solid #eaeaea;
+            padding: 20px 0;
+        }
+        .fag-item h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            font-size: 14px;
+            color: #666;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 60px 80px;
+            color: #333;
+        }
+ </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <span>✂️ </span>
+                <span>SCISSOR</span>
+            </div>
+            <nav class="nav">
+                <a href="#urls" class="active">MY URLs</a>
+                <a href="#features">features</a>
+                <a href="#pricing">pricing</a>
+                <a href="#analytics">Analytics</a>
+                <a href="#faqs">FAQs</a>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn-login">login</a>
+                <a href="#" class="btn-primary">Try for free</a>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <h1 class="hero-title">
+                    Optimize Your Online Experience with Our <br>
+                    <span class="highlight">Advanced URL Shortening</span> Solution
+                </h1>
+                <p class="hero-description">
+                    Personalize your shortened URLs to align with your brand identity. Utilize custom slugs, branded links, and domain customization to enhance your brand presence and user trust.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn-primary">Sign up</a>
+                    <a href="#" class="btn-link">Learn More</a>
+                </div>
+            </section>
+            <section class="stats">
+                <div class="stats-title">
+                    <h2>One Stop.<br>Four Possibilities.</h2>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>3M</h3>
+                        <P>Active users</P>
+                    </div>
+                    <div class="stat-item">
+                        <h3>60M</h3>
+                        <p>Links & QR codes created</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1B</h3>
+                        <P>Clicked & scanned connections</P> 
+                    </div>
+                    <div class="stat-item">
+                        <h3>300k</h3>
+                        <p>App integrations</p>
+                    </div>
+                </div>
+            </section>
+            <section class="features" id="features">
+                <h2>Why choose scissor</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>URL Shortening</h3>
+                        <p>scissor allows you to shorten your long URLs efficiently while keeping track of performance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Custom URLs</h3>
+                        <p>bring your brand to life with custom domain names and personlized back-halves.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>QR codes</h3>
+                        <p>Generate scannable QR codes for your short links to bridge physical and digital touchpoints.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Data Analytics</h3>
+                        <p>Receive comprehensive data on click metrics, geographical insights,and user devices.</p>
+                    </div>
+                </div>
+            </section>
+            <Section class="pricing" id="pricing">
+                <h2>A price perfect for your needs.</h2>
+                <p>From free options to enterise-grade solutions.</p>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h4>Free</h4>
+                        <p>Free plan for basic URL shortening needs.</p>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h4>Professional</h4>
+                        <p>Ideal for growing teams and creators.</p>
+                        <h3>$15 / month</h3>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>Teams</h4>
+                        <p>Advanced feature for scaling businesses</p>
+                        <h3>$25 / month</h3>
+                    </div>
+                </div>
+            </Section>
+            <Section class="faqs" id="faqs">
+                <h2>FAQs</h2>
+                <div class="faq-item">
+                    <h4>How does URL shortening work?</h4>
+                    <p>A URL shortener creates a shorter alias or redirect link that points directly to your original web address.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is custom domai  support available?</h4>
+                    <p>yes,custom domain features let you brand every link you share with your own domain name.</p>
+                </div>
+            </Section>
+        </main>
+        <footer class="footer">
+            <p> &copy;2026 scissor. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
